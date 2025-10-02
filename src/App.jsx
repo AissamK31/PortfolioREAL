@@ -124,13 +124,17 @@ function App() {
             isDarkMode ? "border-primary/10" : "border-neutral/20"
           }`}
         >
-          <nav role="navigation" aria-label="Navigation principale" className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <nav
+            role="navigation"
+            aria-label="Navigation principale"
+            className="container mx-auto px-4 py-4 flex justify-between items-center"
+          >
             <h1
               className={`text-2xl font-bold ${
-                isDarkMode ? "text-primary" : "text-primary/90"
+                isDarkMode ? "text-light" : "text-dark"
               }`}
             >
-              Aïssam K.
+              <span className="text-primary">Aïssam</span> K.
             </h1>
 
             {/* Desktop Menu */}
@@ -339,7 +343,11 @@ function App() {
               >
                 <span className="text-primary">Aïssam KALI</span>
                 <br />
-                <span className={isDarkMode ? "text-light" : "text-dark"}>
+                <span
+                  className={`font-medium ${
+                    isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                >
                   Développeur Web & Mobile
                 </span>
               </motion.h1>
@@ -351,12 +359,12 @@ function App() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <span className="text-primary font-semibold">
+                <span className="text-action font-semibold">
                   {currentAge} ans
                 </span>
                 , méthodique et analytique, je transforme des concepts complexes
                 en{" "}
-                <span className="text-primary font-semibold">
+                <span className="text-action font-semibold">
                   solutions élégantes
                 </span>
               </motion.p>
@@ -399,19 +407,19 @@ function App() {
                 transition={{ delay: 1.2 }}
               >
                 <div className="text-center">
-                  <p className="text-success text-2xl font-bold">100%</p>
+                  <p className="text-action text-2xl font-bold">100%</p>
                   <p className={isDarkMode ? "text-light/70" : "text-dark/70"}>
                     Satisfaction client
                   </p>
                 </div>
                 <div className="text-center">
-                  <p className="text-success text-2xl font-bold">24/7</p>
+                  <p className="text-action text-2xl font-bold">24/7</p>
                   <p className={isDarkMode ? "text-light/70" : "text-dark/70"}>
                     Support réactif
                   </p>
                 </div>
                 <div className="text-center">
-                  <p className="text-success text-2xl font-bold">&lt;48h</p>
+                  <p className="text-action text-2xl font-bold">&lt;48h</p>
                   <p className={isDarkMode ? "text-light/70" : "text-dark/70"}>
                     Temps de réponse
                   </p>
@@ -436,9 +444,7 @@ function App() {
                 isDarkMode ? "text-light/90" : "text-dark/90"
               }`}
             >
-              <span className="text-accent font-semibold">
-                Offre limitée :
-              </span>{" "}
+              <span className="text-accent font-semibold">Offre limitée :</span>{" "}
               Profitez d&apos;une consultation gratuite pour lancer votre projet
               web{" "}
               <span className="inline-block" aria-hidden="true">
@@ -630,7 +636,7 @@ function App() {
                 transition={{ duration: 0.5 }}
                 className="card bg-white dark:bg-dark/50 hover:border hover:border-primary/20"
               >
-                <div className="text-primary mb-4">
+                <div className="text-action mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-12 w-12"
@@ -646,7 +652,7 @@ function App() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-action mb-2">
                   Double Expertise
                 </h3>
                 <p className="text-dark/90 dark:text-light/90">
@@ -662,7 +668,7 @@ function App() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="card bg-white dark:bg-dark/50 hover:border hover:border-primary/20"
               >
-                <div className="text-primary mb-4">
+                <div className="text-action mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-12 w-12"
@@ -678,7 +684,7 @@ function App() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-action mb-2">
                   Efficacité Garantie
                 </h3>
                 <p className="text-dark/90 dark:text-light/90">
@@ -694,7 +700,7 @@ function App() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="card bg-white dark:bg-dark/50 hover:border hover:border-primary/20"
               >
-                <div className="text-primary mb-4">
+                <div className="text-action mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-12 w-12"
@@ -710,7 +716,7 @@ function App() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-2">
+                <h3 className="text-xl font-semibold text-action mb-2">
                   Communication Claire
                 </h3>
                 <p className="text-dark/90 dark:text-light/90">
@@ -796,7 +802,7 @@ function App() {
                   </div>
                 </div>
                 <h3
-                  className={`text-2xl font-semibold text-primary mb-4 ${
+                  className={`text-2xl font-semibold text-success mb-4 ${
                     isDarkMode ? "text-primary" : "text-primary"
                   }`}
                 >
