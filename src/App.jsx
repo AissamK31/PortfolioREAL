@@ -330,12 +330,12 @@ function App() {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-                <motion.h1
-                  className="text-4xl md:text-6xl font-bold mb-6"
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                >
+              <motion.h1
+                className="text-4xl md:text-6xl font-bold mb-6"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
                 <span className="text-primary">Aïssam KALI</span>
                 <br />
                 <span className={isDarkMode ? "text-light" : "text-dark"}>
@@ -438,10 +438,10 @@ function App() {
               <span className="text-primary font-semibold">
                 Offre limitée :
               </span>{" "}
-              Profitez d'une consultation gratuite pour lancer votre projet web{" "}
-                <span className="inline-block" aria-hidden="true">
-                  🚀
-                </span>
+              Profitez d&apos;une consultation gratuite pour lancer votre projet web{" "}
+              <span className="inline-block" aria-hidden="true">
+                🚀
+              </span>
             </p>
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-pulse-slow"></div>
@@ -549,7 +549,7 @@ function App() {
                         isDarkMode ? "text-light" : "text-dark"
                       }`}
                     >
-                      Technologies en cours d'apprentissage
+                      Technologies en cours d&apos;apprentissage
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {["HTML5", "CSS3", "JavaScript", "React.js"].map(
@@ -649,7 +649,7 @@ function App() {
                 </h3>
                 <p className="text-dark/90 dark:text-light/90">
                   Mon background en comptabilité combiné au développement web
-                  m'apporte une vision unique pour créer des solutions adaptées
+                  m&apos;apporte une vision unique pour créer des solutions adaptées
                   à vos besoins business.
                 </p>
               </motion.div>
@@ -745,7 +745,7 @@ function App() {
                   }`}
                 >
                   En tant que développeur en formation, je me concentre
-                  actuellement sur l'acquisition des fondamentaux du
+                  actuellement sur l&apos;acquisition des fondamentaux du
                   développement web. Cette section sera bientôt enrichie de
                   projets concrets démontrant mes compétences techniques.
                 </p>
