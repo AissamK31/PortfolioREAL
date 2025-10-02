@@ -5,7 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#DC2626",
+        primary: "#DC2626", // Identité de marque (logo, nom)
+        action: "#2563EB", // Actions principales (boutons CTA)
+        success: "#059669", // Souvenirs/succès (statistiques)
+        accent: "#EA580C", // Accents informationnels
+        brand: "#DC2626", // Alias pour identité (compatibilité)
         secondary: "#0A0A0A",
         dark: "#0A0A0A",
         light: "#F4F4F8",
