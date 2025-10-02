@@ -117,13 +117,14 @@ function App() {
       >
         {/* Header/Navigation */}
         <header
+          role="banner"
           className={`fixed top-0 w-full ${
             isDarkMode ? "bg-dark/80" : "bg-light/80"
           } backdrop-blur-sm z-40 border-b ${
             isDarkMode ? "border-primary/10" : "border-neutral/20"
           }`}
         >
-          <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <nav role="navigation" aria-label="Navigation principale" className="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1
               className={`text-2xl font-bold ${
                 isDarkMode ? "text-primary" : "text-primary/90"
@@ -398,19 +399,19 @@ function App() {
                 transition={{ delay: 1.2 }}
               >
                 <div className="text-center">
-                  <p className="text-primary text-2xl font-bold">100%</p>
+                  <p className="text-success text-2xl font-bold">100%</p>
                   <p className={isDarkMode ? "text-light/70" : "text-dark/70"}>
                     Satisfaction client
                   </p>
                 </div>
                 <div className="text-center">
-                  <p className="text-primary text-2xl font-bold">24/7</p>
+                  <p className="text-success text-2xl font-bold">24/7</p>
                   <p className={isDarkMode ? "text-light/70" : "text-dark/70"}>
                     Support réactif
                   </p>
                 </div>
                 <div className="text-center">
-                  <p className="text-primary text-2xl font-bold">&lt;48h</p>
+                  <p className="text-success text-2xl font-bold">&lt;48h</p>
                   <p className={isDarkMode ? "text-light/70" : "text-dark/70"}>
                     Temps de réponse
                   </p>
@@ -435,10 +436,11 @@ function App() {
                 isDarkMode ? "text-light/90" : "text-dark/90"
               }`}
             >
-              <span className="text-primary font-semibold">
+              <span className="text-accent font-semibold">
                 Offre limitée :
               </span>{" "}
-              Profitez d&apos;une consultation gratuite pour lancer votre projet web{" "}
+              Profitez d&apos;une consultation gratuite pour lancer votre projet
+              web{" "}
               <span className="inline-block" aria-hidden="true">
                 🚀
               </span>
@@ -649,8 +651,8 @@ function App() {
                 </h3>
                 <p className="text-dark/90 dark:text-light/90">
                   Mon background en comptabilité combiné au développement web
-                  m&apos;apporte une vision unique pour créer des solutions adaptées
-                  à vos besoins business.
+                  m&apos;apporte une vision unique pour créer des solutions
+                  adaptées à vos besoins business.
                 </p>
               </motion.div>
 

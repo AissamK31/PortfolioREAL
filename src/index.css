@@ -117,3 +117,21 @@
 .card:hover::after {
   @apply opacity-100;
 }
+
+/* Styles hover sémantiques RGAA */
+.nav-link:hover {
+  @apply text-action;
+}
+
+.section-title:hover {
+  @apply bg-action/10;
+}
+
+/* Styles focus-visible RGAA */
+.btn:focus-visible,
+.nav-link:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply outline-2 outline-offset-2 outline-action ring-2 ring-action;
+}
