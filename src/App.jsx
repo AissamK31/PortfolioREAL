@@ -322,10 +322,7 @@ function App() {
         </header>
 
         {/* Hero Section */}
-        <section
-          id="accueil"
-          className={`section pt-32 ${isDarkMode ? "bg-hex-pattern" : ""}`}
-        >
+        <section id="accueil" className="section pt-32 bg-hex-pattern">
           <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -454,10 +451,7 @@ function App() {
         </motion.div>
 
         {/* À propos Section */}
-        <section
-          id="a-propos"
-          className={`section py-20 ${isDarkMode ? "bg-hex-pattern" : ""}`}
-        >
+        <section id="a-propos" className="section py-20 bg-hex-pattern">
           <div className="container">
             <motion.h2
               className="section-title"
@@ -730,10 +724,7 @@ function App() {
         </section>
 
         {/* Projets Section */}
-        <section
-          id="projets"
-          className={`section py-20 ${isDarkMode ? "bg-hex-pattern" : ""}`}
-        >
+        <section id="projets" className="section py-20 bg-hex-pattern">
           <div className="container">
             <motion.h2
               className="section-title"
@@ -777,7 +768,7 @@ function App() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="section bg-dark">
+        <section className={`section ${isDarkMode ? "bg-dark" : "bg-light"}`}>
           <div className="container">
             <h2 className="section-title">Disponibilité & Engagement</h2>
             <div className="max-w-3xl mx-auto">
@@ -785,7 +776,9 @@ function App() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="card text-center"
+                className={`card text-center ${
+                  isDarkMode ? "bg-dark" : "bg-light"
+                }`}
               >
                 <div className="flex justify-center mb-6">
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
@@ -803,17 +796,29 @@ function App() {
                     </svg>
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold text-primary mb-4">
+                <h3
+                  className={`text-2xl font-semibold text-primary mb-4 ${
+                    isDarkMode ? "text-primary" : "text-primary"
+                  }`}
+                >
                   Prêt pour de Nouveaux Défis
                 </h3>
-                <p className="text-light/90 text-lg mb-6">
+                <p
+                  className={`text-lg mb-6 ${
+                    isDarkMode ? "text-light/90" : "text-dark/90"
+                  }`}
+                >
                   En tant que développeur junior passionné, je suis actuellement
                   disponible pour des projets freelance. Mon engagement est
                   total pour chaque projet, avec une approche méthodique héritée
                   de mon parcours en comptabilité.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <div className="bg-dark/50 px-4 py-2 rounded-lg border border-primary/10 flex items-center gap-2">
+                  <div
+                    className={`px-4 py-2 rounded-lg border border-primary/10 flex items-center gap-2 ${
+                      isDarkMode ? "bg-dark/50" : "bg-light/50"
+                    }`}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5 text-primary"
@@ -826,11 +831,19 @@ function App() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-light/90">
+                    <span
+                      className={`${
+                        isDarkMode ? "text-light/90" : "text-dark/90"
+                      }`}
+                    >
                       Disponible immédiatement
                     </span>
                   </div>
-                  <div className="bg-dark/50 px-4 py-2 rounded-lg border border-primary/10 flex items-center gap-2">
+                  <div
+                    className={`px-4 py-2 rounded-lg border border-primary/10 flex items-center gap-2 ${
+                      isDarkMode ? "bg-dark/50" : "bg-light/50"
+                    }`}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5 text-primary"
@@ -839,7 +852,13 @@ function App() {
                     >
                       <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
                     </svg>
-                    <span className="text-light/90">Formation continue</span>
+                    <span
+                      className={`${
+                        isDarkMode ? "text-light/90" : "text-dark/90"
+                      }`}
+                    >
+                      Formation continue
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -848,10 +867,7 @@ function App() {
         </section>
 
         {/* Contact Section */}
-        <section
-          id="contact"
-          className={`section py-20 ${isDarkMode ? "bg-hex-pattern" : ""}`}
-        >
+        <section id="contact" className="section py-20 bg-hex-pattern">
           <div className="container">
             <motion.h2
               className="section-title"
