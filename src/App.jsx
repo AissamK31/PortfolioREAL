@@ -150,7 +150,7 @@ function App() {
                 Accueil
               </a>
               <a
-                href="#apropos"
+                href="#a-propos"
                 className={`nav-link ${
                   isDarkMode
                     ? "text-light hover:text-primary"
@@ -1343,7 +1343,7 @@ function App() {
                   Accueil
                 </a>
                 <a
-                  href="#apropos"
+                  href="#a-propos"
                   onClick={toggleMenu}
                   className="text-light hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-dark/90 bg-black/20 backdrop-blur-sm shadow-lg"
                 >
