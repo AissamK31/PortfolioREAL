@@ -444,7 +444,7 @@ function App() {
                 isDarkMode ? "text-light/90" : "text-dark/90"
               }`}
             >
-              <span className="text-accent font-semibold">Offre limitée :</span>{" "}
+              <span className="text-action font-semibold">Offre limitée :</span>{" "}
               Profitez d&apos;une consultation gratuite pour lancer votre projet
               web{" "}
               <span className="inline-block" aria-hidden="true">
@@ -625,6 +625,212 @@ function App() {
           </div>
         </section>
 
+        {/* Projets Section */}
+        <section id="projets" className="section py-20 bg-hex-pattern">
+          <div className="container">
+            <motion.h2
+              className="section-title"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Mes Projets
+            </motion.h2>
+
+            <motion.div
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              {/* Portfolio React */}
+              <div className="card group">
+                <div className="aspect-video bg-gradient-to-br from-primary/20 to-action/20 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="text-6xl">🚀</div>
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-2 ${
+                    isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                >
+                  Portfolio Personnel
+                </h3>
+                <p
+                  className={`${
+                    isDarkMode ? "text-light/80" : "text-dark/80"
+                  } mb-4`}
+                >
+                  Mon portfolio développé avec React, Vite et Tailwind CSS.
+                  Design moderne et responsive avec gestion des thèmes
+                  sombre/clair.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {["React", "Vite", "Tailwind", "JavaScript"].map((tech) => (
+                    <span
+                      key={tech}
+                      className={`px-2 py-1 rounded text-xs ${
+                        isDarkMode
+                          ? "bg-dark text-action"
+                          : "bg-light text-action"
+                      } border border-action/30`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <a
+                    href="https://github.com/AissamK31/PortfolioREAL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary flex-1 text-center"
+                  >
+                    Code Source
+                  </a>
+                  <a
+                    href="#accueil"
+                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors flex-1 text-center"
+                  >
+                    Voir le Site
+                  </a>
+                </div>
+              </div>
+
+              {/* Calculator App */}
+              <div className="card group">
+                <div className="aspect-video bg-gradient-to-br from-success/20 to-action/20 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="text-6xl">🧮</div>
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-2 ${
+                    isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                >
+                  Calculateur Interactif
+                </h3>
+                <p
+                  className={`${
+                    isDarkMode ? "text-light/80" : "text-dark/80"
+                  } mb-4`}
+                >
+                  Application de calculatrice développée en JavaScript vanilla
+                  avec interface utilisateur intuitive et gestion des erreurs.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {["HTML5", "CSS3", "JavaScript", "Responsive"].map((tech) => (
+                    <span
+                      key={tech}
+                      className={`px-2 py-1 rounded text-xs ${
+                        isDarkMode
+                          ? "bg-dark text-action"
+                          : "bg-light text-action"
+                      } border border-action/30`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <a
+                    href="#contact"
+                    className="btn btn-primary flex-1 text-center"
+                  >
+                    Contact
+                  </a>
+                  <a
+                    href="#contact"
+                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors flex-1 text-center text-sm"
+                  >
+                    Demander une Démo
+                  </a>
+                </div>
+              </div>
+
+              {/* Todo Manager */}
+              <div className="card group">
+                <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="text-6xl">📝</div>
+                </div>
+                <h3
+                  className={`text-xl font-semibold mb-2 ${
+                    isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                >
+                  Gestionnaire de Tâches
+                </h3>
+                <p
+                  className={`${
+                    isDarkMode ? "text-light/80" : "text-dark/80"
+                  } mb-4`}
+                >
+                  Application de gestion de tâches avec authentification, CRUD
+                  complet et dashboard utilisateur réalisée pendant ma
+                  formation.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {["React", "Node.js", "MongoDB", "Backend"].map((tech) => (
+                    <span
+                      key={tech}
+                      className={`px-2 py-1 rounded text-xs ${
+                        isDarkMode
+                          ? "bg-dark text-action"
+                          : "bg-light text-action"
+                      } border border-action/30`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <a
+                    href="#contact"
+                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors flex-1 text-center"
+                  >
+                    En Développement
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Call to Action */}
+            <motion.div
+              className="text-center mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <h3
+                className={`text-2xl font-semibold mb-4 ${
+                  isDarkMode ? "text-light" : "text-dark"
+                }`}
+              >
+                Un projet similaire vous intéresse ?
+              </h3>
+              <p
+                className={`mb-6 ${
+                  isDarkMode ? "text-light/80" : "text-dark/80"
+                }`}
+              >
+                Contactez-moi pour discuter de vos besoins et créer ensemble la
+                solution parfaite pour votre entreprise.
+              </p>
+              <a
+                href="#contact"
+                className={`inline-flex items-center gap-2 btn btn-primary ${
+                  isDarkMode
+                    ? "bg-action hover:bg-action/90"
+                    : "bg-action hover:bg-action/90"
+                } transition-colors duration-200`}
+              >
+                <span>🚀</span>
+                Démarrer un Projet
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Why Choose Me Section */}
         <section className="section">
           <div className="container">
@@ -728,50 +934,6 @@ function App() {
           </div>
         </section>
 
-        {/* Projets Section */}
-        <section id="projets" className="section py-20 bg-hex-pattern">
-          <div className="container">
-            <motion.h2
-              className="section-title"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Projets
-            </motion.h2>
-            <motion.div
-              className="max-w-3xl mx-auto text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <div className="card">
-                <p
-                  className={`text-lg mb-6 ${
-                    isDarkMode ? "text-light/80" : "text-dark/80"
-                  }`}
-                >
-                  En tant que développeur en formation, je me concentre
-                  actuellement sur l&apos;acquisition des fondamentaux du
-                  développement web. Cette section sera bientôt enrichie de
-                  projets concrets démontrant mes compétences techniques.
-                </p>
-                <div className="flex justify-center">
-                  <motion.a
-                    href="#contact"
-                    className="btn btn-primary"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Discutons de votre projet
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
         {/* Testimonials Section */}
         <section className={`section ${isDarkMode ? "bg-dark" : "bg-light"}`}>
           <div className="container">
@@ -802,7 +964,7 @@ function App() {
                   </div>
                 </div>
                 <h3
-                  className={`text-2xl font-semibold text-success mb-4 ${
+                  className={`text-2xl font-semibold text-action mb-4 ${
                     isDarkMode ? "text-primary" : "text-primary"
                   }`}
                 >
