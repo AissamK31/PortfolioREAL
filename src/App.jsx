@@ -6,6 +6,26 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const menuTimerRef = useRef(null);
 
+  // Fonction pour calculer l'âge automatiquement
+  const calculateAge = () => {
+    const birthDate = new Date(2000, 7, 31); // 31 août 2000 (mois 7 car janvier = 0)
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    // Si l'anniversaire n'a pas encore eu lieu cette année
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+
+    return age;
+  };
+
+  const currentAge = calculateAge();
+
   useEffect(() => {
     // Vérifier la préférence système initiale
     const prefersDark = window.matchMedia(
@@ -332,8 +352,10 @@ function App() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <span className="text-primary font-semibold">24 ans</span>,
-                méthodique et analytique, je transforme des concepts complexes
+                <span className="text-primary font-semibold">
+                  {currentAge} ans
+                </span>
+                , méthodique et analytique, je transforme des concepts complexes
                 en{" "}
                 <span className="text-primary font-semibold">
                   solutions élégantes
