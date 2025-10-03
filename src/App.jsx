@@ -493,12 +493,12 @@ function App() {
                         isDarkMode ? "text-light" : "text-dark"
                       }`}
                     >
-                      2024
+                      2025
                     </p>
                     <p
                       className={isDarkMode ? "text-light/80" : "text-dark/80"}
                     >
-                      Formation Développeur Web - Simplon Valenciennes
+                      Titre Professionnel Développeur Web et Web Mobile - SOFIP
                     </p>
                   </motion.div>
                   <motion.div
@@ -512,12 +512,13 @@ function App() {
                         isDarkMode ? "text-light" : "text-dark"
                       }`}
                     >
-                      2022
+                      2024
                     </p>
                     <p
                       className={isDarkMode ? "text-light/80" : "text-dark/80"}
                     >
-                      BTS Comptabilité
+                      Formation initiale Développeur Web front-end - Simplon
+                      Valenciennes
                     </p>
                   </motion.div>
                   <motion.div
@@ -536,7 +537,7 @@ function App() {
                     <p
                       className={isDarkMode ? "text-light/80" : "text-dark/80"}
                     >
-                      Baccalauréat ES
+                      Baccalauréat Économique et Social
                     </p>
                   </motion.div>
                 </div>
@@ -557,30 +558,36 @@ function App() {
                         isDarkMode ? "text-light" : "text-dark"
                       }`}
                     >
-                      Technologies en cours d&apos;apprentissage
+                      Technologies maîtrisées et en cours d&apos;apprentissage
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {["HTML5", "CSS3", "JavaScript", "React.js"].map(
-                        (skill, index) => (
-                          <motion.span
-                            key={skill}
-                            className={`px-3 py-1 rounded-full text-sm ${
-                              isDarkMode
-                                ? "bg-dark text-light"
-                                : "bg-light text-dark"
-                            } border border-primary/20`}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            whileHover={{
-                              scale: 1.05,
-                              borderColor: "rgba(220, 38, 38, 0.5)",
-                            }}
-                            transition={{ delay: index * 0.1 }}
-                          >
-                            {skill}
-                          </motion.span>
-                        )
-                      )}
+                      {[
+                        "HTML5",
+                        "CSS3",
+                        "JavaScript",
+                        "React.js",
+                        "PHP",
+                        "Symfony",
+                        "MySQL",
+                      ].map((skill, index) => (
+                        <motion.span
+                          key={skill}
+                          className={`px-3 py-1 rounded-full text-sm ${
+                            isDarkMode
+                              ? "bg-dark text-light"
+                              : "bg-light text-dark"
+                          } border border-primary/20`}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          whileHover={{
+                            scale: 1.05,
+                            borderColor: "rgba(37, 99, 235, 0.5)",
+                          }}
+                          transition={{ delay: index * 0.1 }}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
                     </div>
                   </div>
 
@@ -636,7 +643,7 @@ function App() {
             >
               Mes Projets
             </motion.h2>
-            
+
             <motion.div
               className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
@@ -645,28 +652,51 @@ function App() {
               transition={{ delay: 0.2 }}
             >
               {/* Site Franck Bataille - Réflexologue */}
-              <div className={`bg-white/95 dark:bg-dark/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 dark:border-light/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col`}>
+              <div
+                className={`bg-white/95 dark:bg-dark/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 dark:border-light/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col`}
+              >
                 {/* Image Header */}
                 <div className="h-40 bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center relative overflow-hidden">
                   <div className="text-6xl animate-pulse">🌿</div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-                
+
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
                   {/* Title */}
-                  <h3 className={`text-lg font-bold mb-3 ${isDarkMode ? "text-light" : "text-dark"} line-clamp-2`}>
+                  <h3
+                    className={`text-lg font-bold mb-3 ${
+                      isDarkMode ? "text-light" : "text-dark"
+                    } line-clamp-2`}
+                  >
                     Site Franck Bataille
                   </h3>
-                  
+
                   {/* Description */}
-                  <p className={`text-sm mb-4 flex-1 ${isDarkMode ? "text-light/75" : "text-dark/75"} line-clamp-3`}>
-                    Site vitrine pour praticien certifié en réflexologie plantaire et massage bien-être depuis 2015.
+                  <p
+                    className={`text-sm mb-4 flex-1 ${
+                      isDarkMode ? "text-light/75" : "text-dark/75"
+                    } line-clamp-3`}
+                  >
+                    Site vitrine pour praticien certifié en réflexologie
+                    plantaire et massage bien-être depuis 2015.
                   </p>
-                  
+
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
-                    {["HTML5", "CSS3", "JS", "WordPress"].map((tech) => (
+                    {[
+                      "HTML5",
+                      "CSS3",
+                      "JavaScript",
+                      "PHP",
+                      "Symfony",
+                      "MySQL",
+                      "RGAA",
+                      "Accessibilité",
+                      "Responsive",
+                      "Performance",
+                      "SEO",
+                    ].map((tech) => (
                       <span
                         key={tech}
                         className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -679,7 +709,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  
+
                   {/* Buttons */}
                   <div className="space-y-2">
                     <a
@@ -687,8 +717,8 @@ function App() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`w-full block text-center py-2.5 px-4 rounded-lg font-medium transition-colors ${
-                        isDarkMode 
-                          ? "bg-action hover:bg-action/90 text-light" 
+                        isDarkMode
+                          ? "bg-action hover:bg-action/90 text-light"
                           : "bg-action hover:bg-action/90 text-light"
                       }`}
                     >
@@ -711,25 +741,36 @@ function App() {
               </div>
 
               {/* Portfolio Personnel */}
-              <div className={`bg-white/95 dark:bg-dark/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 dark:border-light/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col`}>
+              <div
+                className={`bg-white/95 dark:bg-dark/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 dark:border-light/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col`}
+              >
                 {/* Image Header */}
                 <div className="h-40 bg-gradient-to-br from-primary/30 to-action/30 flex items-center justify-center relative overflow-hidden">
                   <div className="text-6xl animate-bounce">🚀</div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-                
+
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col">
                   {/* Title */}
-                  <h3 className={`text-lg font-bold mb-3 ${isDarkMode ? "text-light" : "text-dark"}`}>
+                  <h3
+                    className={`text-lg font-bold mb-3 ${
+                      isDarkMode ? "text-light" : "text-dark"
+                    }`}
+                  >
                     Portfolio Personnel
                   </h3>
-                  
+
                   {/* Description */}
-                  <p className={`text-sm mb-4 flex-1 ${isDarkMode ? "text-light/75" : "text-dark/75"}`}>
-                    Portfolio développé avec React, Vite et Tailwind CSS. Design responsive avec thèmes sombre/clair et conformité RGAA.
+                  <p
+                    className={`text-sm mb-4 flex-1 ${
+                      isDarkMode ? "text-light/75" : "text-dark/75"
+                    }`}
+                  >
+                    Portfolio développé avec React, Vite et Tailwind CSS. Design
+                    responsive avec thèmes sombre/clair et conformité RGAA.
                   </p>
-                  
+
                   {/* Tech Stack */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {["React", "Vite", "Tailwind", "RGAA"].map((tech) => (
@@ -745,14 +786,14 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  
+
                   {/* Buttons */}
                   <div className="space-y-2">
                     <a
                       href="#accueil"
                       className={`w-full block text-center py-2.5 px-4 rounded-lg font-medium transition-colors ${
-                        isDarkMode 
-                          ? "bg-action hover:bg-action/90 text-light" 
+                        isDarkMode
+                          ? "bg-action hover:bg-action/90 text-light"
                           : "bg-action hover:bg-action/90 text-light"
                       }`}
                     >
