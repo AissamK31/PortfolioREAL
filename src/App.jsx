@@ -636,159 +636,141 @@ function App() {
             >
               Mes Projets
             </motion.h2>
-
+            
             <motion.div
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              {/* Portfolio React */}
-              <div className="card group">
-                <div className="aspect-video bg-gradient-to-br from-primary/20 to-action/20 rounded-lg mb-4 flex items-center justify-center">
-                  <div className="text-6xl">🚀</div>
+              {/* Site Franck Bataille - Réflexologue */}
+              <div className={`bg-white/95 dark:bg-dark/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 dark:border-light/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col`}>
+                {/* Image Header */}
+                <div className="h-40 bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center relative overflow-hidden">
+                  <div className="text-6xl animate-pulse">🌿</div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-                <h3
-                  className={`text-xl font-semibold mb-2 ${
-                    isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                >
-                  Portfolio Personnel
-                </h3>
-                <p
-                  className={`${
-                    isDarkMode ? "text-light/80" : "text-dark/80"
-                  } mb-4`}
-                >
-                  Mon portfolio développé avec React, Vite et Tailwind CSS.
-                  Design moderne et responsive avec gestion des thèmes
-                  sombre/clair.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {["React", "Vite", "Tailwind", "JavaScript"].map((tech) => (
-                    <span
-                      key={tech}
-                      className={`px-2 py-1 rounded text-xs ${
-                        isDarkMode
-                          ? "bg-dark text-action"
-                          : "bg-light text-action"
-                      } border border-action/30`}
+                
+                {/* Content */}
+                <div className="p-6 flex-1 flex flex-col">
+                  {/* Title */}
+                  <h3 className={`text-lg font-bold mb-3 ${isDarkMode ? "text-light" : "text-dark"} line-clamp-2`}>
+                    Site Franck Bataille
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className={`text-sm mb-4 flex-1 ${isDarkMode ? "text-light/75" : "text-dark/75"} line-clamp-3`}>
+                    Site vitrine pour praticien certifié en réflexologie plantaire et massage bien-être depuis 2015.
+                  </p>
+                  
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {["HTML5", "CSS3", "JS", "WordPress"].map((tech) => (
+                      <span
+                        key={tech}
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${
+                          isDarkMode
+                            ? "bg-action/20 text-action"
+                            : "bg-action/10 text-action"
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Buttons */}
+                  <div className="space-y-2">
+                    <a
+                      href="https://bien-etre-reflexologie-relaxation-roeulx.fr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full block text-center py-2.5 px-4 rounded-lg font-medium transition-colors ${
+                        isDarkMode 
+                          ? "bg-action hover:bg-action/90 text-light" 
+                          : "bg-action hover:bg-action/90 text-light"
+                      }`}
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  <a
-                    href="https://github.com/AissamK31/PortfolioREAL"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary flex-1 text-center"
-                  >
-                    Code Source
-                  </a>
-                  <a
-                    href="#accueil"
-                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors flex-1 text-center"
-                  >
-                    Voir le Site
-                  </a>
+                      Voir le Site
+                    </a>
+                    <a
+                      href="https://github.com/alexandredess/franckbat.git"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full block text-center py-2 px-4 rounded-lg border text-sm font-medium transition-colors ${
+                        isDarkMode
+                          ? "border-action text-action hover:bg-action hover:text-light"
+                          : "border-action text-action hover:bg-action hover:text-light"
+                      }`}
+                    >
+                      Code Source
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              {/* Calculator App */}
-              <div className="card group">
-                <div className="aspect-video bg-gradient-to-br from-success/20 to-action/20 rounded-lg mb-4 flex items-center justify-center">
-                  <div className="text-6xl">🧮</div>
+              {/* Portfolio Personnel */}
+              <div className={`bg-white/95 dark:bg-dark/95 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 dark:border-light/10 overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col`}>
+                {/* Image Header */}
+                <div className="h-40 bg-gradient-to-br from-primary/30 to-action/30 flex items-center justify-center relative overflow-hidden">
+                  <div className="text-6xl animate-bounce">🚀</div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-                <h3
-                  className={`text-xl font-semibold mb-2 ${
-                    isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                >
-                  Calculateur Interactif
-                </h3>
-                <p
-                  className={`${
-                    isDarkMode ? "text-light/80" : "text-dark/80"
-                  } mb-4`}
-                >
-                  Application de calculatrice développée en JavaScript vanilla
-                  avec interface utilisateur intuitive et gestion des erreurs.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {["HTML5", "CSS3", "JavaScript", "Responsive"].map((tech) => (
-                    <span
-                      key={tech}
-                      className={`px-2 py-1 rounded text-xs ${
-                        isDarkMode
-                          ? "bg-dark text-action"
-                          : "bg-light text-action"
-                      } border border-action/30`}
+                
+                {/* Content */}
+                <div className="p-6 flex-1 flex flex-col">
+                  {/* Title */}
+                  <h3 className={`text-lg font-bold mb-3 ${isDarkMode ? "text-light" : "text-dark"}`}>
+                    Portfolio Personnel
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className={`text-sm mb-4 flex-1 ${isDarkMode ? "text-light/75" : "text-dark/75"}`}>
+                    Portfolio développé avec React, Vite et Tailwind CSS. Design responsive avec thèmes sombre/clair et conformité RGAA.
+                  </p>
+                  
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {["React", "Vite", "Tailwind", "RGAA"].map((tech) => (
+                      <span
+                        key={tech}
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${
+                          isDarkMode
+                            ? "bg-action/20 text-action"
+                            : "bg-action/10 text-action"
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Buttons */}
+                  <div className="space-y-2">
+                    <a
+                      href="#accueil"
+                      className={`w-full block text-center py-2.5 px-4 rounded-lg font-medium transition-colors ${
+                        isDarkMode 
+                          ? "bg-action hover:bg-action/90 text-light" 
+                          : "bg-action hover:bg-action/90 text-light"
+                      }`}
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  <a
-                    href="#contact"
-                    className="btn btn-primary text-center w-28"
-                  >
-                    Contact
-                  </a>
-                  <a
-                    href="#contact"
-                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors text-center text-sm flex-1"
-                  >
-                    Demander une Démo
-                  </a>
-                </div>
-              </div>
-
-              {/* Todo Manager */}
-              <div className="card group">
-                <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
-                  <div className="text-6xl">📝</div>
-                </div>
-                <h3
-                  className={`text-xl font-semibold mb-2 ${
-                    isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                >
-                  Gestionnaire de Tâches
-                </h3>
-                <p
-                  className={`${
-                    isDarkMode ? "text-light/80" : "text-dark/80"
-                  } mb-4`}
-                >
-                  Application de gestion de tâches avec authentification, CRUD
-                  complet et dashboard utilisateur réalisée pendant ma
-                  formation.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {["React", "Node.js", "MongoDB", "Backend"].map((tech) => (
-                    <span
-                      key={tech}
-                      className={`px-2 py-1 rounded text-xs ${
+                      Vous êtes ici
+                    </a>
+                    <a
+                      href="https://github.com/AissamK31/PortfolioREAL"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full block text-center py-2 px-4 rounded-lg border text-sm font-medium transition-colors ${
                         isDarkMode
-                          ? "bg-dark text-action"
-                          : "bg-light text-action"
-                      } border border-action/30`}
+                          ? "border-action text-action hover:bg-action hover:text-light"
+                          : "border-action text-action hover:bg-action hover:text-light"
+                      }`}
                     >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  <a
-                    href="#contact"
-                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors flex-1 text-center"
-                  >
-                    En Développement
-                  </a>
+                      Code Source
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
