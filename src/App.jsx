@@ -734,13 +734,13 @@ function App() {
                 <div className="flex gap-3">
                   <a
                     href="#contact"
-                    className="btn btn-primary flex-1 text-center"
+                    className="btn btn-primary text-center w-28"
                   >
                     Contact
                   </a>
                   <a
                     href="#contact"
-                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors flex-1 text-center text-sm"
+                    className="btn border border-action text-action hover:bg-action hover:text-light transition-colors text-center text-sm flex-1"
                   >
                     Demander une Démo
                   </a>
